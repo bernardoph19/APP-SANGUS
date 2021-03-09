@@ -1,20 +1,70 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="w-full">
+  <div class="flex items-center mt-4 px-1">
+    <img class="w-10 h-10" src="assets/img/users.png" alt="">
+    <!-- <ion-searchbar animated></ion-searchbar> -->
+    <ion-searchbar debounce="500" class="text-xs text-gray-600 focus w-full" placeholder="Buscar.."></ion-searchbar>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true">
+  <div class="flex justify-between w-full items-center px-2">
+    <p class="text-sm font-medium text-gray-900">Listado</p>
+    <p class="text-sm font-medium text-gray-900">2</p>
   </div>
+
+  <main class="px-2 pt-2">
+    <section class="border-b border-gray-200 py-1">
+      <div class="flex items-center justify-between">
+        <span class="flex items-center justify-start">
+          <ion-icon class="text-red-500 w-5 h-5" name="calendar-outline"></ion-icon>
+          <p class="text-red-500 text-sm">12/3/2021</p>
+        </span>
+        <span class="flex items-center justify-end">
+          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-sm">Aceptar</button>
+        </span>
+      </div>
+      <div class="w-full">
+        <p class="text-sm font-medium text-gray-800">Angela Marttinez Campos </p>
+        <p class="text-xs text-left text-gray-500">906540028</p>
+        <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
+      </div>
+    </section>
+    <section class="border-b border-gray-200 py-1">
+      <div class="flex items-center justify-between">
+        <span class="flex items-center justify-start">
+          <ion-icon class="text-red-500 w-5 h-5" name="calendar-outline"></ion-icon>
+          <p class="text-red-500 text-sm">12/3/2021</p>
+        </span>
+        <span class="flex items-center justify-end">
+          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-sm">Aceptar</button>
+        </span>
+      </div>
+      <div class="w-full">
+        <p class="text-sm font-medium text-gray-800">Angela Marttinez Campos </p>
+        <p class="text-xs text-left text-gray-500">906540028</p>
+        <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
+      </div>
+    </section>
+  </main>
 </ion-content>
+
+
+
+<!-- tabs -->
+<ion-tabs>
+  <!-- pendientes -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="pendientes" class="hover:bg-green-400 hover:text-white">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label class="text-sm">Pendientes</ion-label>
+      <ion-badge>2</ion-badge>
+    </ion-tab-button>
+
+    <!-- historial -->
+    <ion-tab-button tab="historial" class="hover:bg-green-400 ">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label class="text-sm">Historial</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
