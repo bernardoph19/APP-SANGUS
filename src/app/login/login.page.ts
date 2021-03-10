@@ -79,7 +79,8 @@ export class LoginPage implements OnInit {
             
         if( r.message === "exito" ){
           const result = r.result;     
-          this.reset()      
+          this.reset();
+          this.navigateRute();
         }
         
       }, ( error )=>{      
@@ -102,5 +103,8 @@ export class LoginPage implements OnInit {
     this.formSesion.reset();
   }
 
+  navigateRute(){
+    this.router.navigate(['/tabs']);
+  }
 
 }
