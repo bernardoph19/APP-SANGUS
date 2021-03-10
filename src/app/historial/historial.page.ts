@@ -15,7 +15,6 @@ export class HistorialPage implements OnInit {
       cssClass: '',
       header: 'Filtro',
       inputs: [
-
         {
           name: 'name1',
           type: 'text',
