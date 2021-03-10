@@ -12,14 +12,14 @@ export class HistorialPage implements OnInit {
 
   async presentAlertPrompt() {
     const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
+      cssClass: '',
       header: 'Filtro',
       inputs: [
 
         {
           name: 'name1',
           type: 'text',
-          cssClass:'bg-red-600',
+          cssClass:'',
           placeholder: 'Placeholder 1',
         },
 
@@ -36,7 +36,7 @@ export class HistorialPage implements OnInit {
           name: 'name8',
           type: 'password',
           placeholder: 'Advanced Attributes',
-          cssClass: 'specialClass',
+          cssClass: '',
           attributes: {
             maxlength: 4,
             inputmode: 'decimal'
@@ -48,7 +48,7 @@ export class HistorialPage implements OnInit {
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass: 'primary',
+          cssClass: 'btn',
           handler: () => {
             console.log('Confirm Cancel');
           }
