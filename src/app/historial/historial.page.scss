@@ -1,0 +1,22 @@
+.btn{
+  background: #D9002F;
+  padding: 2px;
+  border-radius: 75px;
+  color: white;
+}
+
+.btn:hover{
+  background:#ee0c3d;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.my-custom-class{
+  font-size: 13px;
+  font-weight: 400px;
+  color: black;
+  border-bottom: black;
+}
+
