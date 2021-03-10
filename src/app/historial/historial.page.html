@@ -3,16 +3,23 @@
     <img class="w-10 h-10" src="assets/img/users.png" alt="">
     <!-- <ion-searchbar animated></ion-searchbar> -->
     <!-- <ion-searchbar debounce="500"  placeholder="Buscar.."></ion-searchbar> -->
-    <ion-searchbar  class="text-xs" placeholder="Buscar..." animated></ion-searchbar>
+    <ion-searchbar class="text-xs" placeholder="Buscar..." animated></ion-searchbar>
   </div>
-  <div class="flex justify-between w-full items-center px-2 py-1">
-    <p class="text-sm font-medium text-gray-900">Listado</p>
-    <p class="text-sm font-medium text-gray-900">2</p>
+
+  <div class="flex justify-between w-full items-center px-2">
+    <p class="text-sm font-medium text-gray-900">Atendidos</p>
+    <div class="flex items-center justify-items-end">
+      <p class="text-sm font-medium text-gray-900 pl-2">8</p>
+      <!-- filtro -->
+      <button (click)="presentAlertPrompt()" class="p-2 focus:outline-none hover:bg-gray-200 h-8 rounded-full">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </div>
   </div>
 </ion-header>
 
-
-<ion-content [fullscreen]="true">
+<!-- listado -->
+<ion-content>
   <main class="px-2 pt-2">
     <section class="border-b border-gray-200 py-1">
       <div class="flex items-center justify-between">
@@ -21,16 +28,14 @@
           <p class="text-red-500 text-xs font-medium">12/3/2021</p>
         </span>
         <span class="flex items-center justify-end">
-          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-xs">Aceptar</button>
+          <ion-icon class=" w-7 h-7 text-green-500 " name="checkmark-circle"></ion-icon>
         </span>
       </div>
-      <div class="w-full">
-        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos</p>
-        <p class="text-xs text-left text-gray-500">906540028</p>
-        <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
+      <div class="w-full flex justify-between">
+        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos </p>
+        <p class="text-xs text-left text-green-700 font-medium">s/.90.80</p>
       </div>
     </section>
-
     <section class="border-b border-gray-200 py-1">
       <div class="flex items-center justify-between">
         <span class="flex items-center justify-start">
@@ -38,22 +43,15 @@
           <p class="text-red-500 text-xs font-medium">12/3/2021</p>
         </span>
         <span class="flex items-center justify-end">
-          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-xs">Aceptar</button>
+          <ion-icon class=" w-7 h-7 text-green-500 " name="checkmark-circle"></ion-icon>
         </span>
       </div>
-      <div class="w-full">
-        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos</p>
-        <p class="text-xs text-left text-gray-500">906540028</p>
-        <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
+      <div class="w-full flex justify-between">
+        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos </p>
+        <p class="text-xs text-left text-green-700 font-medium">s/.90.80</p>
       </div>
     </section>
+
   </main>
+
 </ion-content>
-
-
-
-
-
-
-
-
