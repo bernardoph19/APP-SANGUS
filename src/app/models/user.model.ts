@@ -6,3 +6,11 @@ export class mdUser{
 export class mdRepartidor{    
     idusuario: string;    
 }
+export class mdPedido{    
+    idventa: string;    
+}
+export class mdPedidoAtendido{    
+    idusuario   : string;
+    fechainicio : string;
+    fechafin    : string;
+}

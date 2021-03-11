@@ -20,8 +20,30 @@
 
 <!-- listado -->
 <ion-content>
+
   <main class="px-2 pt-2">
-    <section class="border-b border-gray-200 py-1">
+
+    <section class="border-b border-gray-200 py-1" *ngFor="let item of listaPedidoAtendido">     
+      <div class="flex items-center justify-between">
+       
+        <span class="flex items-center justify-start">
+          <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
+          <p class="text-red-500 text-xs font-medium"> {{ item.Fecha }} </p>
+        </span>
+
+        <span class="flex items-center justify-end">
+          <ion-icon class=" w-7 h-7 text-green-500 " name="checkmark-circle"></ion-icon>
+        </span>
+      </div>
+
+      <div class="w-full flex justify-between">
+        <p class="text-xs font-medium text-gray-800"> {{ item.Cliente }} </p>
+        <p class="text-xs text-left text-green-700 font-medium">s/ {{ items.Total }}</p>
+      </div>
+    </section>
+
+
+    <!-- <section class="border-b border-gray-200 py-1">
       <div class="flex items-center justify-between">
         <span class="flex items-center justify-start">
           <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
@@ -35,21 +57,8 @@
         <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos </p>
         <p class="text-xs text-left text-green-700 font-medium">s/.90.80</p>
       </div>
-    </section>
-    <section class="border-b border-gray-200 py-1">
-      <div class="flex items-center justify-between">
-        <span class="flex items-center justify-start">
-          <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
-          <p class="text-red-500 text-xs font-medium">12/3/2021</p>
-        </span>
-        <span class="flex items-center justify-end">
-          <ion-icon class=" w-7 h-7 text-green-500 " name="checkmark-circle"></ion-icon>
-        </span>
-      </div>
-      <div class="w-full flex justify-between">
-        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos </p>
-        <p class="text-xs text-left text-green-700 font-medium">s/.90.80</p>
-      </div>
-    </section>
+    </section> -->
+
   </main>
+
 </ion-content>

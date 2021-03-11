@@ -25,6 +25,10 @@ export class HomePage  implements OnInit {
 
 
   ngOnInit() : void {
+    this.loadListPedido();  
+  }
+
+  loadListPedido() {
     const userlogueado = JSON.parse(localStorage.getItem('userLogueado'));
     
     const rep = {
@@ -40,6 +44,26 @@ export class HomePage  implements OnInit {
       }            
 
     });
+  }
+
+  actulziarPedido(id:string) {
+
+    const body = {
+      'idventa' : id
+    };
+
+    this.loginService.actualizarVenta(body)
+    .subscribe( (r : any) => {
+
+      if( r.message === "Venta entragada" ){
+                
+        this.loadListPedido();   
+      }            
+
+    });
+
+    
+
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { LoginserviceService } from 'src/app/services/loginservice.service'; 
 
 
 
@@ -10,7 +11,14 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./historial.page.scss'],
 })
 export class HistorialPage implements OnInit {
-  constructor( public alertController: AlertController) { }
+
+  listaPedidoAtendido : any[];
+
+  constructor( 
+    public alertController: AlertController,
+    private loginService: LoginserviceService, 
+    
+  ) { }
 
 
 
@@ -27,23 +35,21 @@ export class HistorialPage implements OnInit {
           type: 'date',
           label: 'Fecha Incio',
           placeholder:'Fecha de inicio',
-          min: '2017-03-01',
-          max: '2018-01-12'
+          min: '2020-01-01',
+          max: '2025-01-12'
         },
 
         {
           name: 'name5',
+          value: 2,
           type: 'date',
           label: 'Fecha Fin',
           placeholder:'Fecha de inicio',
-          min: '2017-03-01',
-          max: '2018-01-12'
+          min: '2020-01-01',
+          max: '2025-01-12'
         },
 
       ],
-
-
-
 
       buttons: [
         {
@@ -51,14 +57,14 @@ export class HistorialPage implements OnInit {
           role: 'cancel',
           cssClass:'btnn hover:bg-red-600 transition duration-500 ease-in',
           handler: () => {
-            console.log('Confirm Cancel');
+            console.log('Confirm Cancel');            
           }
         },
 
          {
           cssClass:'btnn hover:bg-red-600 transition duration-500 ease-in',
           text: 'Aplicar',
-          handler: () => {
+          handler: () => { 
             console.log('Confirm Ok');
           }
         }
@@ -69,10 +75,30 @@ export class HistorialPage implements OnInit {
     await alert.present();
   }
 
+  loadListPedidoAtendido() {
+        
+    const userlogueado = JSON.parse(localStorage.getItem('userLogueado'));
+    
+    const body = {
+      'idusuario'   : userlogueado.id,
+      'fechainicio' : "2021/03/11",
+      'fechafin'    : "2021/03/11",
+    };
+    
 
+    this.loginService.listarPedidosAtendidos(body)
+    .subscribe( (r : any) => {
+
+      if( r.message === "exito" ){
+                
+        this.listaPedidoAtendido  = r.result;        
+      }            
+
+    });
+  }
 
   ngOnInit() {
-
+    this.loadListPedidoAtendido();
   }
 
 }
