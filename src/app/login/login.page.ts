@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
 
   formSesion: FormGroup;
   message : string;
+  userLogueado : any;
 
   constructor(
 
@@ -75,9 +76,15 @@ export class LoginPage implements OnInit {
       .subscribe ( ( r : any )  =>  {
 
         if( r.message === "exito" ){
-          const result = r.result;
-          this.reset();
+
+          const result = r.result;    
+          
+          this.userLogueado = { id: result.IDUsuario, user : result.Usuario, tipousuario : result.TipoUsuario }
+          localStorage.setItem('userLogueado', JSON.stringify(this.userLogueado));                     
           this.navigateRute();
+          this.reset();
+
+          
         }
 
       }, ( error )=>{
@@ -85,8 +92,8 @@ export class LoginPage implements OnInit {
         this.presentToast(error.error.message);
         this.reset()
       });
-  }
 
+  }  
 
   async presentToast(ms: string) {
     const toast = await this.toastController.create({

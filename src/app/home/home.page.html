@@ -14,24 +14,31 @@
 
 <ion-content [fullscreen]="true">
   <main class="px-2 pt-2">
-    <section class="border-b border-gray-200 py-1">
+
+    <section *ngFor="let item of listaPedido" class="border-b border-gray-200 py-1">
+
       <div class="flex items-center justify-between">
+       
         <span class="flex items-center justify-start">
           <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
-          <p class="text-red-500 text-xs font-medium">12/3/2021</p>
+          <p class="text-red-500 text-xs font-medium"> {{ item.Fecha }}</p>
         </span>
+
         <span class="flex items-center justify-end">
-          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-xs">Aceptar</button>
+          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-xs">Entregado</button>
         </span>
-      </div>
+
+      </div>      
+
       <div class="w-full">
-        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos</p>
-        <p class="text-xs text-left text-gray-500">906540028</p>
-        <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
+        <p class="text-xs font-medium text-gray-800">{{ item.Cliente }}</p>
+        <p class="text-xs text-left text-gray-500">{{ item.Telefono }}</p>
+        <p class="text-xs text-gray-400">{{ item.DireccionEnvio }}</p>
       </div>
+
     </section>
 
-    <section class="border-b border-gray-200 py-1">
+    <!-- <section class="border-b border-gray-200 py-1">
       <div class="flex items-center justify-between">
         <span class="flex items-center justify-start">
           <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
@@ -46,7 +53,8 @@
         <p class="text-xs text-left text-gray-500">906540028</p>
         <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
       </div>
-    </section>
+    </section> -->
+
   </main>
 </ion-content>
 

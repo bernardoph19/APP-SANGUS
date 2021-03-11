@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { mdUser } from 'src/app/models/user.model';
+import { mdUser, mdRepartidor } from 'src/app/models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,17 @@ export class LoginserviceService {
       })
     });
     
+  }
+  
+  listarPendientesToday( modeloRepartidor : mdRepartidor){
+
+    return this.http.post('https://agustin.innovated.xyz/api/administracion/repartidor/repartidorentregaspendientes',  modeloRepartidor, {
+      headers: new HttpHeaders({
+        'Content-Type'  : "application/json",
+        'Authorization' : "INNOVATED"
+      })
+    });
+  
   }
 
 
