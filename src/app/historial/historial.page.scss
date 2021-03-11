@@ -1,5 +1,5 @@
 
-.btn{
+.success{
   background: #D9002F;
   padding: 2px;
   border-radius: 75px;
@@ -7,11 +7,11 @@
 }
 
 
-.btn:hover{
+.success:hover{
   background:#ee0c3d;
 }
 
-.btn:focus{
+.success:focus{
   outline: none;
 }
 
@@ -28,30 +28,20 @@
 }
 
 
-inputs.formontrol{
-  border: solid red;
-  background: #fff;
+
+
+.my-custom-class {
+  --background:red;
+  color: #D9002F;
+
 }
 
+/* DOES NOT WORK - not specific enough */
+.alert-wrapper {
+  background: #e5e5e5;
+}
 
-
-.alert-button {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  border-radius: 0;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 50%;
-  height: 44px;
-  border-top: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
-  border-right: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
-  background-color: transparent;
-  color: #bb2b5a;
-  font-size: 17px;
-  overflow: hidden;
-  border: solid 2px;
-  margin: 3px;
-  border-radius: 50px;
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .alert-wrapper {
+  background: #e5e5e5;
 }

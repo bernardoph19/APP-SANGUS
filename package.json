@@ -21,8 +21,10 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@capacitor/core": "2.4.7",
+    "@ionic-native/date-picker": "^5.31.1",
     "@ionic/angular": "^5.5.2",
     "@ngneat/tailwind": "^6.0.3",
+    "cordova-plugin-datepicker": "^0.9.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

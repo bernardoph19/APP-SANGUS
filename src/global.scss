@@ -33,6 +33,18 @@
 
   /* Border para error de un input */
 
+  .alert-button.sc-ion-alert-md {
+    padding-left: unset;
+    padding-right: unset;
+    -webkit-padding-start: 10px;
+    background-color: #D9002F;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 400;
+
+    padding: 2px 5px;
+  }
 
 
   body {
@@ -51,6 +63,20 @@
 .success {
   box-shadow: 0 0 3px #5cd053;
   border-color: #2ecc71;
+}
+
+
+.btn{
+  background: #D9002F;
+  padding: 2px;
+  border-radius: 75px;
+  color: white;
+}
+.btn:hover{
+  background:#ee0c3d;
+}
+.btn:focus{
+  outline: none;
 }
 
 /* Mejor el codifgo de nuestro proyecto */
