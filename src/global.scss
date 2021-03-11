@@ -33,18 +33,39 @@
 
   /* Border para error de un input */
 
-  .alert-button.sc-ion-alert-md {
-    padding-left: unset;
-    padding-right: unset;
-    -webkit-padding-start: 10px;
-    background-color: #D9002F;
-    color: white;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: 400;
+  // .alert-button.sc-ion-alert-md {
+  //   padding-left: unset;
+  //   padding-right: unset;
+  //   -webkit-padding-start: 10px;
+  //   background-color: #D9002F;
+  //   color: white;
+  //   border-radius: 50px;
+  //   font-size: 15px;
+  //   font-weight: 400;
+  //   text-transform: uppercase;
+  //   padding: 3px 8px    }
 
-    padding: 2px 5px;
+
+  .alert-button.sc-ion-alert-md {
+    padding: 6px 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #c02144;
+    font-size: 13px;
+    color: white;
   }
+
+  .alert-button.sc-ion-alert-md {
+    padding: 6px 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #c02144;
+    font-size: 13px;
+    color: white;
+  }
+
+
+
 
 
   body {
@@ -66,18 +87,19 @@
 }
 
 
-.btn{
-  background: #D9002F;
-  padding: 2px;
-  border-radius: 75px;
-  color: white;
+.btnn:hover{
+  background:#ffffff;
+  color: #c02144;
+  border-radius: 3px;
+  border: solid 1px  #c02144;
 }
-.btn:hover{
-  background:#ee0c3d;
-}
-.btn:focus{
+
+
+
+.btnn:focus{
   outline: none;
 }
+
 
 /* Mejor el codifgo de nuestro proyecto */
 

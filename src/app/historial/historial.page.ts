@@ -22,6 +22,7 @@ export class HistorialPage implements OnInit {
       inputs: [
 
         {
+          cssClass:'',
           name: 'name4',
           type: 'date',
           placeholder:'Fecha de inicio',
@@ -40,19 +41,20 @@ export class HistorialPage implements OnInit {
 
 
 
+
       buttons: [
         {
           text: 'Cancel',
           role: 'cancel',
-          cssClass:'btn',
+          cssClass:'btnn hover:bg-red-600 transition duration-500 ease-in',
           handler: () => {
             console.log('Confirm Cancel');
           }
         },
 
          {
-
-          text: 'aplicar',
+          cssClass:'btnn hover:bg-red-600 transition duration-500 ease-in',
+          text: 'Aplicar',
           handler: () => {
             console.log('Confirm Ok');
           }
