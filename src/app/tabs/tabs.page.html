@@ -2,17 +2,18 @@
   <!-- tabs -->
   <ion-tabs>
     <!-- pendientes -->
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="pendientes" class="hover:bg-green-400 hover:text-white">
+    <ion-tab-bar slot="bottom" color="success" >
+      <ion-tab-button class="focus:bg-red-500" tab="pendientes" >
         <ion-icon name="calendar"></ion-icon>
         <ion-label class="text-sm">Pendientes</ion-label>
-        <ion-badge>2</ion-badge>
+        <ion-badge class="bg-red-500  font-normal">2</ion-badge>
       </ion-tab-button>
 
+
       <!-- historial -->
-      <ion-tab-button tab="historial" class="hover:bg-green-400 ">
+      <ion-tab-button  tab="historial">
         <ion-icon name="information-circle"></ion-icon>
-        <ion-label class="text-sm">Historial</ion-label>
+        <ion-label class="text-sm font-medium">Historial</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>

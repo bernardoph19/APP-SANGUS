@@ -10,15 +10,15 @@ export class HistorialPage implements OnInit {
 
   constructor(public alertController: AlertController) {}
 
-  async presentAlertPrompt() {
+  async modalfiltros() {
     const alert = await this.alertController.create({
-      cssClass: '',
+      cssClass: 'text-xs font-normal',
       header: 'Filtro',
       inputs: [
         {
           name: 'name1',
           type: 'text',
-          cssClass:'',
+          cssClass:'bg-red-600',
           placeholder: 'Placeholder 1',
         },
 

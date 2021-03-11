@@ -19,6 +19,9 @@
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
 
+
+
+
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
   --ion-color-secondary-rgb: 61, 194, 255;
@@ -74,6 +77,17 @@
   --ion-color-medium-contrast-rgb: 255, 255, 255;
   --ion-color-medium-shade: #808289;
   --ion-color-medium-tint: #9d9fa6;
+
+// micolor
+
+:root {
+  --ion-color-micolor: #87BE56;
+  --ion-color-micolor-rgb: 135,190,86;
+  --ion-color-micolor-contrast: #000000;
+  --ion-color-micolor-contrast-rgb: 0,0,0;
+  --ion-color-micolor-shade: #77a74c;
+  --ion-color-micolor-tint: #93c567;
+}
 
   /** light **/
   --ion-color-light: #f4f5f8;
