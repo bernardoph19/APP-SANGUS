@@ -21,18 +21,18 @@
             <!-- #usuario -->
             <!-- name="correo" -->
             <input formControlName="usuario"
-                  id="correo"
+                  id="usuario"
                   type="text"
                   required
                   [class.error]="userNovalido"
-                  class="text-sm bg-gray-50  pl-10 pr-4 font-normal focus:border-green-500  rounded-lg border border-gray-200  w-full py-2 focus"
+                  class="text-sm sm:text-base bg-gray-50  pl-10 pr-4 font-normal  focus  rounded-lg border border-gray-200  w-full py-2 focus:outline-none"
                   placeholder="Ingrese usuario"/>
 
 
-            <!-- validacion exito  ------clases=" success"-->
-            <div class="inline-flex items-center  justify-center absolute right-0 top-0 h-full w-10 text-gray-400">
-              <ion-icon class="w-5 h-5 color-icons" name="checkmark-circle-outline"></ion-icon>
-              <ion-icon class="w-5 h-5 text-red-500 hidden" name="close-circle-outline"></ion-icon>
+            <!-- validacion exito  ------clases=" success"-->                         
+            <div  class="inline-flex items-center  justify-center absolute right-0 top-0 h-full w-10 text-gray-400">
+              <ion-icon *ngIf="!userNovalido" class="w-5 h-5 color-icons" name="checkmark-circle-outline"></ion-icon>
+              <ion-icon *ngIf="userNovalido" class="w-5 h-5 text-red-500" name="close-circle-outline"></ion-icon>
             </div>
         </div>
         <small *ngIf="userNovalido" class="flex items-center animated fadeIn font-medium tracking-wide text-red-500 text-xs mt-1 ml-1"> Campo de usuario inválido. </small>
@@ -54,17 +54,17 @@
                   type="password"
                   [class.error]="passNovalido"
                   required
-                  class="text-sm bg-gray-50  pl-10 pr-4 font-normal focus:border-green-500  rounded-lg border border-gray-200  w-full py-2 focus"
+                  class="text-sm bg-gray-50  pl-10 pr-4 font-normal focus  rounded-lg border border-gray-200  w-full py-2 focus"
                   placeholder="*******" />
 
             <!-- validacion exito  ------clases=" success"-->
             <div class="inline-flex items-center  justify-center absolute right-0 top-0 h-full w-10 text-gray-400">
-              <ion-icon class="w-5 h-5  color-icons " name="checkmark-circle-outline"></ion-icon>
-              <ion-icon class="w-5 h-5 text-red-500 hidden " name="close-circle-outline"></ion-icon>
+              <ion-icon  *ngIf="!passNovalido"  class="w-5 h-5  color-icons" name="checkmark-circle-outline"></ion-icon>
+              <ion-icon  *ngIf="passNovalido"  class="w-5 h-5 text-red-500" name="close-circle-outline"></ion-icon>
             </div>
 
           </div>
-          <small *ngIf="userNovalido" class="flex items-center animated fadeIn font-medium tracking-wide text-red-500 text-xs mt-1 ml-1"> Campo de password inválido. </small>
+          <small *ngIf="passNovalido" class="flex items-center animated fadeIn font-medium tracking-wide text-red-500 text-xs mt-1 ml-1"> Campo de password inválido. </small>
     </div>
 
 
