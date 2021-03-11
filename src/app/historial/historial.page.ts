@@ -25,13 +25,16 @@ export class HistorialPage implements OnInit {
           cssClass:'',
           name: 'name4',
           type: 'date',
+          label: 'Fecha Incio',
           placeholder:'Fecha de inicio',
           min: '2017-03-01',
           max: '2018-01-12'
         },
+
         {
-          name: 'name4',
+          name: 'name5',
           type: 'date',
+          label: 'Fecha Fin',
           placeholder:'Fecha de inicio',
           min: '2017-03-01',
           max: '2018-01-12'
