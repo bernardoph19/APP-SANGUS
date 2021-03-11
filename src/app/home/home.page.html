@@ -18,7 +18,7 @@
     <section *ngFor="let item of listaPedido" class="border-b border-gray-200 py-1">
 
       <div class="flex items-center justify-between">
-       
+
         <span class="flex items-center justify-start">
           <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
           <p class="text-red-500 text-xs font-medium"> {{ item.Fecha }}</p>
@@ -28,33 +28,21 @@
           <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-xs">Entregado</button>
         </span>
 
-      </div>      
+      </div>
 
       <div class="w-full">
         <p class="text-xs font-medium text-gray-800">{{ item.Cliente }}</p>
         <p class="text-xs text-left text-gray-500">{{ item.Telefono }}</p>
         <p class="text-xs text-gray-400">{{ item.DireccionEnvio }}</p>
       </div>
-
     </section>
 
-    <!-- <section class="border-b border-gray-200 py-1">
-      <div class="flex items-center justify-between">
-        <span class="flex items-center justify-start">
-          <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
-          <p class="text-red-500 text-xs font-medium">12/3/2021</p>
-        </span>
-        <span class="flex items-center justify-end">
-          <button type="button" class="btn w-full h-9 cursor-pointer font-medium px-6 text-xs">Aceptar</button>
-        </span>
+       <!-- No hay ningun pendiente -->
+       <div class="flex flex-col items-center pt-20 content-center  justify-center">
+        <img src="assets/img/pendientes.svg" alt="">
+          <p class="text-sm font-medium leading-normal w-full  text-center text-gray-600">No hay ningún pendiente</p>
+          <p class="text-xs leading-3 text-center w-full text-gray-500">Al parecer no se le asigno pedidos</p>
       </div>
-      <div class="w-full">
-        <p class="text-xs font-medium text-gray-800">Angela Marttinez Campos</p>
-        <p class="text-xs text-left text-gray-500">906540028</p>
-        <p class="text-xs text-gray-400">Av. América Norte 1760 Bloque C dpto 502 - SAN ANDRES I ETAPA</p>
-      </div>
-    </section> -->
-
   </main>
 </ion-content>
 
