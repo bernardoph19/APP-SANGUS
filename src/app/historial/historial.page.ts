@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { LoginserviceService } from 'src/app/services/loginservice.service'; 
+import { ModalController } from '@ionic/angular';
+import { ModalfechaPage } from './../modalfecha/modalfecha.page';
 
 
 
@@ -12,13 +14,37 @@ import { LoginserviceService } from 'src/app/services/loginservice.service';
 })
 export class HistorialPage implements OnInit {
 
-  listaPedidoAtendido : any[];
+  listaPedidoAtendido : any[];  
+  
+  /* customPickerOptions: any;
+  customDate; */
+
+  fechaInicio : Date = new Date();
 
   constructor( 
     public alertController: AlertController,
-    private loginService: LoginserviceService, 
-    
-  ) { }
+    private loginService: LoginserviceService,     
+    private modalCtrl: ModalController 
+
+  ) { 
+
+    /* this.customPickerOptions = {
+      buttons: [{
+        text: 'Aceptar',
+        handler: (event) => {
+          console.log('Clicked Save!');
+          console.log(event);
+        }
+      }, {
+        text: 'Cancelar',
+        handler: () => {
+          console.log('Clicked Log. Do not Dismiss.');
+          return false;
+        }
+      }]
+    } */
+
+  }
 
 
 
@@ -75,6 +101,25 @@ export class HistorialPage implements OnInit {
     await alert.present();
   }
 
+  async abrirModal() {
+
+    const modal = await this.modalCtrl.create({
+      component: ModalfechaPage,
+      componentProps: {
+        nombre: 'Fernando',
+        pais: 'Costa Rica'
+      }
+    });
+
+    await modal.present();
+
+    const { data } = await modal.onDidDismiss();
+
+    console.log('Retorno del modal', data );
+
+  }
+
+
   loadListPedidoAtendido() {
         
     const userlogueado = JSON.parse(localStorage.getItem('userLogueado'));
@@ -96,6 +141,13 @@ export class HistorialPage implements OnInit {
 
     });
   }
+
+  seleccionaFechaInicio(event) {
+    console.log('ionChange', event)
+    console.log('Date', new Date (event.detail.value ))
+
+  }
+
 
   ngOnInit() {
     this.loadListPedidoAtendido();

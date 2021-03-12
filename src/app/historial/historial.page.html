@@ -4,22 +4,53 @@
     <!-- <ion-searchbar animated></ion-searchbar> -->
     <!-- <ion-searchbar debounce="500"  placeholder="Buscar.."></ion-searchbar> -->
     <ion-searchbar class="text-xs placeholder-gray-900" placeholder="Buscar..." animated></ion-searchbar>
-  </div>
+  </div>    
+   
 
   <div class="flex justify-between w-full items-center px-2">
     <p class="text-sm font-medium text-gray-900">Atendidos</p>
     <div class="flex items-center justify-items-end">
       <p class="text-sm font-medium text-gray-900 pl-2">8</p>
+
+          <button (click)="abrirModal()" class="p-2 focus:outline-none hover:bg-gray-200 h-8 rounded-full">
+            <ion-icon name="funnel"></ion-icon>
+          </button> 
+      
       <!-- filtro -->
-      <button (click)="modalfiltros()" class="p-2 focus:outline-none hover:bg-gray-200 h-8 rounded-full">
-        <ion-icon name="funnel"></ion-icon>
-      </button>
+      <!-- (click)="modalfiltros()" -->      
+      <!-- <ion-item class="text-sm font-medium">    
+        <ion-icon name="funnel" class="p-2 h-8 rounded-full"></ion-icon> -->
+        
+
+        <!-- value="{{fechaInicio | date: 'dd-mm-yyyy'}}" -->
+        <!-- <ion-datetime 
+                      displayFormat="DD MM YYYY"                               
+                      cancelText="Cancelar"
+                      [ngModel]="fechaInicio.toISOString()"
+                      (ionChange)="seleccionaFechaInicio($event)"
+                      min="2021-01-01"
+                      max="2031-12-31"
+        >
+        </ion-datetime>     -->                 
+                        
+      
+      <!-- </ion-item> -->
+
+
     </div>
   </div>
 </ion-header>
 
 <!-- listado -->
 <ion-content>
+  <!-- <ion-datetime 
+        displayFormat="DD MM YYYY"                      
+        [pickerOptions]="customPickerOptions"
+        [(ngModel)]="customDate"                      
+        min="2021-01-01"
+        max="2031-12-31"
+      >
+      </ion-datetime>     -->
 
   <main class="px-2 pt-2">
 
@@ -28,7 +59,7 @@
        
         <span class="flex items-center justify-start">
           <ion-icon class="text-red-500 w-4 h-4" name="calendar-outline"></ion-icon>
-          <p class="text-red-500 text-xs font-medium"> {{ item.Fecha }} </p>
+          <p class="text-red-500 text-xs font-medium pl-1"> {{ item.Fecha }} </p>
         </span>
 
         <span class="flex items-center justify-end">
@@ -38,7 +69,7 @@
 
       <div class="w-full flex justify-between">
         <p class="text-xs font-medium text-gray-800"> {{ item.Cliente }} </p>
-        <p class="text-xs text-left text-green-700 font-medium">s/ {{ items.Total }}</p>
+        <p class="text-xs text-left text-green-700 font-medium">s/ {{ item.Total }}</p>
       </div>
     </section>
 
